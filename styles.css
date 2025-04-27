@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: 'Arial';
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h3 {
+  font-weight: 500;
+  display: flex;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 2fr 8fr;
+  grid-template-areas: 
+  'sidebar header'
+  'sidebar main';
+}
+
+.header {
+  background-color: rgb(255, 255, 255);
+  grid-area: header;
+  box-shadow: 3px 5px 5px rgb(182, 182, 182);
+  z-index: 1;
+}
+
+.sidebar {
+  background-color: rgb(44, 136, 255);
+  grid-area: sidebar;
+  height: 100vh;
+  width: 20%;
+  position: fixed;
+}
+
+.main-content {
+  background-color: rgb(219, 219, 219);
+  grid-area: main;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+
+.dash, .sch-icon, .notification, .pfp, .Lpfp {
+  width: 45px;
+  height: auto;
+  margin-right: 5px;
+}
+
+.mid, .bottom {
+  margin-top: 50px;
+}
+
+.mid-inf, .btm-inf {
+  margin-left: 30px;
+  margin-right: 20px;
+}
+
+.mid-info, .btm-info {
+  padding-bottom: 25px;
+}
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  'Top'
+  'Bottom';
+}
+
+.hContent-top {
+  grid-area: Top;
+}
+
+.hContent-bottom {
+  grid-area: Bottom;
+}
+
+.hContent-top, .hContent-bottom {
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+h2, h4, p, .name {
+  color: black;
+}
+
+.sch {
+  height: 5vh;
+  width: 40vw;
+  background-color: rgb(206, 206, 206);
+  border-radius: 20px;
+  margin-left: -35%;
+}
+
+.search {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2.5%;
+  margin-top: 2%;
+  margin-left: 5%;
+}
+
+.sch-icon {
+  height: auto;
+  width: 15%;
+}
+
+.aside {
+  margin-top: 1.5%;
+}
+
+.notification {
+  height: auto;
+  width: 30px;
+  margin-left: -150%;
+  margin-right: 20%;
+}
+
+.pfp {
+  height: auto;
+  width: 40px;
+}
+
+.name {
+  margin-top: -27%;
+  margin-left: -50%;
+}
+
+.buttons {
+  display: flex;
+  margin-right: 40px;
+  margin-top: 20px;
+}
+
+.button {
+  color: rgb(255, 255, 255);
+  background-color: rgb(44, 136, 255);
+  border-radius: 50px;
+  width: 120px;
+  height: 40px;
+  text-align: center;
+  margin-right: 5%;
+  padding: 11px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.Lpfp {
+  height: 70px;
+  width: 70px;
+  margin: -10px 20px 0 50px;
+}
+
+.large-info {
+  display: flex;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin: 7% 4%;
+  grid-area: main-body;
+}
+
+.project {
+  background-color: white;
+  border-radius: 10px;
+  border-left: 9px solid orange;
+  padding: 40px 30px;
+  box-shadow: 1px 1px 5px gray;
+}
+
+.star, .eye, .fork {
+  height: auto;
+  width: 25px;
+}
+
+.icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  margin-right: 10px;
+  margin-top: 20px;
+  margin-bottom: -20px;
+}
+
+.main-content::before {
+  content: "Your projects";
+  font-size: 24px;
+  color: black;
+  display: block;  
+  margin: 40px 30px -40px; 
+  font-weight: 600;
+}
+
+.main-proj {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: 
+  'main-body extra';
+}
+
+.extra {
+  grid-area: extra;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: 
+  'Ann'
+  'Trd';
+  margin: 10% 5% 0 -4%;
+  gap: 20px;
+}
+
+.announcement {
+  grid-area: Ann;
+  height: 50vh;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px gray;
+}
+
+.announcements::before {
+  content: "Announcements";
+  font-size: 24px;
+  color: black;
+  margin-bottom: 10px;
+  font-weight: bold;
+  display: block;
+  margin-top: -6%;
+  margin-bottom: 6%;
+  text-align: center;
+}
+
+.trend {
+  grid-area: Trd;
+  height: 50vh;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px gray;
+}
+
+.trends::before {
+  content: "Trending";
+  font-size: 24px;
+  color: black;
+  font-weight: bold;
+  display: block;
+  margin-top: -6%;
+  margin-bottom: 6%;
+  text-align: center;
+}
